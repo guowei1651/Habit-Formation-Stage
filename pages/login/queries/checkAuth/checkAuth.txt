@@ -1,0 +1,3 @@
+SELECT id, username, email, slat, password, auth_platfrom
+FROM users 
+WHERE (username = '{{this.params.login.name}}' OR email = '{{this.params.login.name}}') ;

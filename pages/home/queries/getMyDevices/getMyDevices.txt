@@ -1,0 +1,5 @@
+SELECT d.*, udr.last_online_at, dt.*
+FROM devices as d INNER JOIN user_device_relations as udr ON d.serial = udr.serial
+    INNER JOIN device_type as dt ON d.type_id = dt.id AND dt.delete_flag = FALSE
+WHERE udr.owner_id = {{appsmith.store.growing.id}} AND udr.delete_flag = FALSE
+LIMIT 10;

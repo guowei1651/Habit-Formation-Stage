@@ -1,0 +1,4 @@
+SELECT c.id,c.name,c.description, COUNT(ci.*) as item_num, c.created_at, c.updated_at
+FROM carousel as c LEFT JOIN carousel_item ci ON c.id = ci.carousel_id
+WHERE owner_id = {{appsmith.store.growing.id}} AND c.delete_flag = false
+GROUP BY c.id;
