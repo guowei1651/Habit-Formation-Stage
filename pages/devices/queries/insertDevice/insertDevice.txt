@@ -1,0 +1,2 @@
+INSERT INTO devices (serial,"name",type_id,status,info,firmware_version)
+	VALUES ('{{this.params.serial}}','{{this.params.serial}}',1,'offline','{{this.params.serial}}','{{this.params.serial}}');

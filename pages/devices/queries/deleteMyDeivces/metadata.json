@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6776409599a03b6e785aa1c3_a4d73d54-60ad-495c-a18c-5215f2b6441b",
-  "id": "devices_findAllDeviceTypes",
+  "gitSyncId": "6776409599a03b6e785aa1c3_cb88c059-1c36-45a9-a68b-863bdd44d152",
+  "id": "devices_deleteMyDeivces",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id, name, allow_deletion\nFROM device_types\nWHERE delete_flag = FALSE;",
+      "body": "UPDATE user_device_relations \nSET delete_flag = TRUE \nWHERE serial = '{{this.params.serial}}' AND owner_id = {{appsmith.store.growing.id}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,9 +22,13 @@
       "name": "本地数据库",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "executeOnLoad": true,
-    "name": "findAllDeviceTypes",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "executeOnLoad": false,
+    "name": "deleteMyDeivces",
     "pageId": "devices",
     "userSetOnLoad": false
   }

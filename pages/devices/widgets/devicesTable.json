@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 47,
+  "bottomRow": 46,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": true,
   "cellBackground": "",
@@ -43,9 +43,10 @@
   ],
   "columnUpdatedAt": 1736421313349,
   "columnWidthMap": {
-    "firmware_version": 101,
+    "firmware_version": 136,
     "first_online_at": 177,
-    "info": 143,
+    "info": 131,
+    "serial": 140,
     "type_id": 110
   },
   "compactMode": "DEFAULT",
@@ -111,14 +112,27 @@
     },
     {
       "key": "primaryColumns.status.buttonLabel"
+    },
+    {
+      "key": "primaryColumns.customColumn1.isDisabled"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "primaryColumns.status.buttonColor"
+    },
+    {
+      "key": "primaryColumns.customColumn1.isDisabled"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "onRowSelected"
+    }
+  ],
   "enableClientSideSearch": true,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "CENTER",
@@ -139,6 +153,7 @@
   "mobileRightColumn": 46,
   "mobileTopRow": 23,
   "needsErrorInfo": false,
+  "onRowSelected": "{{devicesView.showChageDeviceModal();}}",
   "parentColumnSpace": 19.8125,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -166,7 +181,7 @@
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": true,
-      "isDisabled": false,
+      "isDisabled": "{{devicesTable.processedTableData.map((currentRow, currentIndex) => ( devicesView.DeviceTypes[currentRow['type_id']].allow_deletion))}}",
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
@@ -174,6 +189,7 @@
       "label": "操作",
       "labelColor": "#FFFFFF",
       "notation": "standard",
+      "onClick": "{{deleteMyDeivces.run({\n  \"serial\": devicesTable.triggeredRow.serial\n}).then(() => {\n  findMyDevices.run();\n});}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textColor": "",
@@ -223,7 +239,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{devicesTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"first_online_at\"]))}}",
+      "computedValue": "{{devicesTable.processedTableData.map((currentRow, currentIndex) => ( moment(currentRow[\"first_online_at\"]).zone(\"-08:00\").format('YYYY/MM/DD hh:mm:ss')))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -400,7 +416,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{devicesTable.processedTableData.map((currentRow, currentIndex) => ( devicesView.DeviceTypes[currentRow[\"type_id\"]]))}}",
+      "computedValue": "{{devicesTable.processedTableData.map((currentRow, currentIndex) => ( devicesView.DeviceTypes[currentRow[\"type_id\"]].name))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -437,7 +453,7 @@
   "tableData": "{{findMyDevices.data}}",
   "textColor": "",
   "textSize": "0.875rem",
-  "topRow": 19,
+  "topRow": 18,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

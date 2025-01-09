@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6776409599a03b6e785aa1c3_a4d73d54-60ad-495c-a18c-5215f2b6441b",
-  "id": "devices_findAllDeviceTypes",
+  "gitSyncId": "6776409599a03b6e785aa1c3_95fbff46-58d8-4437-9693-2044f1bc1530",
+  "id": "devices_insertDevice",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id, name, allow_deletion\nFROM device_types\nWHERE delete_flag = FALSE;",
+      "body": "INSERT INTO devices (serial,\"name\",type_id,status,info,firmware_version)\n\tVALUES ('{{this.params.serial}}','{{this.params.serial}}',1,'offline','{{this.params.serial}}','{{this.params.serial}}');\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,9 +22,13 @@
       "name": "本地数据库",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "executeOnLoad": true,
-    "name": "findAllDeviceTypes",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "executeOnLoad": false,
+    "name": "insertDevice",
     "pageId": "devices",
     "userSetOnLoad": false
   }

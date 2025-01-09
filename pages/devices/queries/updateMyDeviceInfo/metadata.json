@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6776409599a03b6e785aa1c3_a4d73d54-60ad-495c-a18c-5215f2b6441b",
-  "id": "devices_findAllDeviceTypes",
+  "gitSyncId": "6776409599a03b6e785aa1c3_67d0ac02-1a2d-422a-b1fa-6eb4227844bf",
+  "id": "devices_updateMyDeviceInfo",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id, name, allow_deletion\nFROM device_types\nWHERE delete_flag = FALSE;",
+      "body": "SELECT * FROM appsmith.\"carousel\" LIMIT 10;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,9 +22,8 @@
       "name": "本地数据库",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "executeOnLoad": true,
-    "name": "findAllDeviceTypes",
+    "executeOnLoad": false,
+    "name": "updateMyDeviceInfo",
     "pageId": "devices",
     "userSetOnLoad": false
   }

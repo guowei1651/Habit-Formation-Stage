@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT d.*\nFROM devices AS d INNER JOIN user_device_relations AS udr \n\tON d.serial = udr.serial \nWHERE udr.owner_id = {{appsmith.store.growing.id}} AND udr.delete_flag = FALSE;",
+      "body": "SELECT d.*,udr.display_name as name, udr.info\nFROM devices AS d INNER JOIN user_device_relations AS udr \n\tON d.serial = udr.serial \nWHERE udr.owner_id = {{appsmith.store.growing.id}} AND udr.delete_flag = FALSE;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

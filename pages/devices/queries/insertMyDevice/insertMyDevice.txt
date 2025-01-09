@@ -1,0 +1,2 @@
+INSERT INTO appsmith.user_device_relations (serial,owner_id)
+	VALUES ('{{this.params.serial}}',{{appsmith.store.growing.id}});

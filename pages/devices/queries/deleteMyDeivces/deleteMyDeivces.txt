@@ -1,0 +1,3 @@
+UPDATE user_device_relations 
+SET delete_flag = TRUE 
+WHERE serial = '{{this.params.serial}}' AND owner_id = {{appsmith.store.growing.id}};

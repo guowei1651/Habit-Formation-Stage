@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6776409599a03b6e785aa1c3_a4d73d54-60ad-495c-a18c-5215f2b6441b",
-  "id": "devices_findAllDeviceTypes",
+  "gitSyncId": "6776409599a03b6e785aa1c3_d89d1bf6-1796-4ee3-b669-e04ffff3e8de",
+  "id": "devices_insertMyDevice",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id, name, allow_deletion\nFROM device_types\nWHERE delete_flag = FALSE;",
+      "body": "INSERT INTO appsmith.user_device_relations (serial,owner_id)\n\tVALUES ('{{this.params.serial}}',{{appsmith.store.growing.id}});",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,9 +22,13 @@
       "name": "本地数据库",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "executeOnLoad": true,
-    "name": "findAllDeviceTypes",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "executeOnLoad": false,
+    "name": "insertMyDevice",
     "pageId": "devices",
     "userSetOnLoad": false
   }
