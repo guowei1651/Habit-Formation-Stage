@@ -1,0 +1,7 @@
+SELECT h.*, COALESCE(hrc.times, 0) as times
+FROM habits AS h LEFT JOIN (
+		SELECT relations_id, COUNT(1) as times 
+		FROM habit_raw_records WHERE type = 1 
+		GROUP by relations_id) AS hrc 
+	ON h.id = hrc.relations_id
+WHERE h.owner_id = {{appsmith.store.growing.id}} AND h.delete_flag = FALSE;

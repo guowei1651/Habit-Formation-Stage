@@ -25,6 +25,14 @@
     {
       "id": "devices",
       "isDefault": false
+    },
+    {
+      "id": "habbit",
+      "isDefault": false
+    },
+    {
+      "id": "carousel",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

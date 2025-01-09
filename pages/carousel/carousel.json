@@ -1,0 +1,32 @@
+{
+  "gitSyncId": "6776409599a03b6e785aa1c3_71f48696-5d96-42ef-9915-5f1ebda8dbdf",
+  "unpublishedPage": {
+    "isHidden": false,
+    "layouts": [
+      {
+        "dsl": {
+          "backgroundColor": "none",
+          "bottomRow": 780,
+          "canExtend": true,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "minHeight": 790,
+          "parentColumnSpace": 1,
+          "parentRowSpace": 1,
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "snapRows": 77,
+          "topRow": 0,
+          "type": "CANVAS_WIDGET",
+          "version": 90,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
+      }
+    ],
+    "name": "carousel",
+    "slug": "carousel"
+  }
+}

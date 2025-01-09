@@ -1,0 +1,32 @@
+{
+  "gitSyncId": "6776409599a03b6e785aa1c3_cb3c0abb-a5df-4265-b7a1-86d1a29b047b",
+  "unpublishedPage": {
+    "isHidden": false,
+    "layouts": [
+      {
+        "dsl": {
+          "backgroundColor": "none",
+          "bottomRow": 420,
+          "canExtend": true,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "minHeight": 790,
+          "parentColumnSpace": 1,
+          "parentRowSpace": 1,
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "snapRows": 77,
+          "topRow": 0,
+          "type": "CANVAS_WIDGET",
+          "version": 90,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
+      }
+    ],
+    "name": "habbit",
+    "slug": "habbit"
+  }
+}
