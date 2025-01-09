@@ -1,0 +1,3 @@
+SELECT id, name 
+FROM device_types
+WHERE delete_flag = FALSE;

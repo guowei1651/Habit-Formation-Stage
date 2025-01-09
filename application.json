@@ -21,6 +21,10 @@
     {
       "id": "home",
       "isDefault": false
+    },
+    {
+      "id": "devices",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

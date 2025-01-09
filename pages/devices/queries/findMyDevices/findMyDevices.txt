@@ -1,0 +1,4 @@
+SELECT d.*
+FROM devices AS d INNER JOIN user_device_relations AS udr 
+	ON d.serial = udr.serial 
+WHERE udr.owner_id = {{appsmith.store.growing.id}} AND udr.delete_flag = FALSE;
