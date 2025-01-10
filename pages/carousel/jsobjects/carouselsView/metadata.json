@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6776409599a03b6e785aa1c3_9452ecf8-305b-404b-a414-676b850c317a",
+  "id": "carousel_carouselsView",
+  "unpublishedCollection": {
+    "name": "carouselsView",
+    "pageId": "carousel",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "index",
+        "value": "0"
+      },
+      {
+        "name": "images",
+        "value": "[]"
+      }
+    ]
+  }
+}
