@@ -1,0 +1,61 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "left",
+  "animateLoading": true,
+  "bottomRow": 12,
+  "boxShadow": "none",
+  "defaultOptionValue": "remind",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "isDisabled": false,
+  "isInline": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "590u345f4f",
+  "label": "轮播展示类型",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 8,
+  "mobileLeftColumn": 9,
+  "mobileRightColumn": 29,
+  "mobileTopRow": 2,
+  "needsErrorInfo": false,
+  "options": [
+    {
+      "label": "常驻页面",
+      "value": "permanent"
+    },
+    {
+      "label": "提醒页面",
+      "value": "remind"
+    },
+    {
+      "label": "随机页面",
+      "value": "random"
+    }
+  ],
+  "originalBottomRow": 12,
+  "originalTopRow": 6,
+  "parentColumnSpace": 19.8125,
+  "parentId": "ksbi5mz1z4",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 24,
+  "topRow": 6,
+  "type": "RADIO_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "n9ibnzv072",
+  "widgetName": "DisplayRadioGroup"
+}

@@ -14,6 +14,14 @@
       {
         "name": "images",
         "value": "[]"
+      },
+      {
+        "name": "carouselItems",
+        "value": "[]"
+      },
+      {
+        "name": "habit",
+        "value": "[]"
       }
     ]
   }

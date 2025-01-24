@@ -1,0 +1,3 @@
+SELECT id,prompt,display_chart,take_habit_from_repetitions
+FROM habits
+WHERE owner_id = {{appsmith.store.growing.id}} AND delete_flag = FALSE;

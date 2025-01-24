@@ -1,0 +1,66 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "left",
+  "animateLoading": true,
+  "bottomRow": 19,
+  "boxShadow": "none",
+  "defaultOptionValue": "habit",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "isDisabled": false,
+  "isInline": true,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "590u345f4f",
+  "label": "当前页类型",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 7,
+  "mobileLeftColumn": 9,
+  "mobileRightColumn": 29,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "options": [
+    {
+      "label": "美图",
+      "value": "image"
+    },
+    {
+      "label": "提醒",
+      "value": "remind"
+    },
+    {
+      "label": "习惯",
+      "value": "habit"
+    },
+    {
+      "label": "长日程",
+      "value": "long_schedule"
+    }
+  ],
+  "originalBottomRow": 19,
+  "originalTopRow": 13,
+  "parentColumnSpace": 19.8125,
+  "parentId": "ksbi5mz1z4",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 25,
+  "shouldScrollContents": true,
+  "topRow": 13,
+  "type": "RADIO_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "9cu2y64gy6",
+  "widgetName": "TypeRadioGroup"
+}

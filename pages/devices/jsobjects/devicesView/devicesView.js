@@ -1,6 +1,11 @@
 export default {
 	DeviceTypes:[],
 	onload () {
+		if (! appsmith.store.growing || ! appsmith.store.growing.id) {
+			navigateTo('login')
+			return
+		}
+
 		findAllDeviceTypes.run()
 
 		var self = this
