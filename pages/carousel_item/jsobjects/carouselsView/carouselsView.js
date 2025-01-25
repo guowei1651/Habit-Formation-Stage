@@ -49,7 +49,9 @@ export default {
 			return;
 		}
 
-		this.carouselItems = []
+		let carouselId = appsmith.URL.queryParams.id
+		await getCarouselItemsByCarouselId.run({"id": carouselId})
+		this.carouselItems = getCarouselItemsByCarouselId.data
 
 		await getHabit.run();
 		this.habit = getHabit.data
