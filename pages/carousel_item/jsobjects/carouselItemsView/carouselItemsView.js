@@ -4,6 +4,8 @@ export default {
 	habit: [],
 	currentItem: {
 		index: 0,
+		displayType: "",
+		pageType: "",
 		setIndex(i) {
 			this.currentItem.index = i
 		},
@@ -20,14 +22,16 @@ export default {
 			return self.gloabThis.carouselItems[this.index]
 		},
 		getDisplayTypeValue() {
-			return this.getItem().displayType
+			return this.currentItem.getItem().displayType
 		},
 		getPageTypeValue() {
-			return this.getItem().pageType
+			return this.currentItem.getItem().pageType
 		},
 		showCarouselItem () {
-			var item = this.carouselItems[this.index]
+			var item = this.currentItem.getItem()
 
+			this.currentItem.displayType = item.displayType
+			this.currentItem.pageType = item.pageType
 			AlertLevelSelect.setSelectedOption(item.alertLevel)
 			DurationInput.setValue(item.duration)
 			TriggerTimeInput.setValue(item.triggerTime)
@@ -98,5 +102,3 @@ export default {
 		await this.fillCarouselItemSlider()
 	},
 }
-
-

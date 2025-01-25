@@ -4,10 +4,13 @@
   "animateLoading": true,
   "bottomRow": 19,
   "boxShadow": "none",
-  "defaultOptionValue": "",
+  "defaultOptionValue": "{{carouselsView}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
+    },
+    {
+      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",

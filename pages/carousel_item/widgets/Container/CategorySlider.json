@@ -32,7 +32,7 @@
   "mobileRightColumn": 54,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "options": "{{carouselsView.carouselItemSlider}}",
+  "options": "{{carouselItemsView.carouselItemSlider}}",
   "parentColumnSpace": 14.546875,
   "parentId": "ksbi5mz1z4",
   "parentRowSpace": 10,

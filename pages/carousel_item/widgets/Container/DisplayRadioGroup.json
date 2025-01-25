@@ -4,7 +4,7 @@
   "animateLoading": true,
   "bottomRow": 12,
   "boxShadow": "none",
-  "defaultOptionValue": "{{\ncarouselsView.currentItem.getDisplayTypeValue()\n}}",
+  "defaultOptionValue": "{{\ncarouselItemsView.currentItem.displayType\n}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
