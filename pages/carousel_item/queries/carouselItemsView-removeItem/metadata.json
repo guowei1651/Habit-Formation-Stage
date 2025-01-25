@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6776409599a03b6e785aa1c3_070b496d-c96a-4c8c-b1f2-343b6b118cac",
-  "id": "carousel_item_carouselItemsView.myFun1",
+  "gitSyncId": "6776409599a03b6e785aa1c3_7f90aaa2-c6df-4320-9f30-6e8ad61f3c15",
+  "id": "carousel_item_carouselItemsView.removeItem",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -10,7 +10,6 @@
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },
-    "clientSideExecution": true,
     "collectionId": "carousel_item_carouselItemsView",
     "confirmBeforeExecute": false,
     "datasource": {
@@ -24,8 +23,8 @@
       }
     ],
     "executeOnLoad": false,
-    "fullyQualifiedName": "carouselItemsView.myFun1",
-    "name": "myFun1",
+    "fullyQualifiedName": "carouselItemsView.removeItem",
+    "name": "removeItem",
     "pageId": "carousel_item",
     "userSetOnLoad": false
   }

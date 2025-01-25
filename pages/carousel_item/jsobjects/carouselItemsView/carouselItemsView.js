@@ -2,42 +2,41 @@ export default {
 	carouselItems: [],
 	carouselItemSlider: [],
 	habit: [],
-	currentItem: {
-		index: 0,
-		displayType: "",
-		pageType: "",
-		setIndex(i) {
-			this.currentItem.index = i
-		},
+	currentItemOperator: {
 		getItem() {
-			let self = this.currentItem
+			let index = this.currentItemData.index
 			console.log("CurrentItem getItem ", this)
 			if (!this.carouselItems || this.carouselItems.length == 0) {
 				return "remind"
 			}
-			let itemCount = self.gloabThis.carouselItems.length
-			if (self.index < 0 || self.index >= itemCount) {
+			let itemCount = this.currentItemData.length
+			if (index < 0 || index >= itemCount) {
 				return "remind"
 			}
-			return self.gloabThis.carouselItems[this.index]
+			return this.currentItemData[this.index]
 		},
 		getDisplayTypeValue() {
-			return this.currentItem.getItem().displayType
+			return this.currentItemOperator.getItem().displayType
 		},
 		getPageTypeValue() {
-			return this.currentItem.getItem().pageType
+			return this.currentItemOperator.getItem().pageType
 		},
 		showCarouselItem () {
-			var item = this.currentItem.getItem()
-
-			this.currentItem.displayType = item.displayType
-			this.currentItem.pageType = item.pageType
+			var item = this.currentItemData.getItem()
+			console.log("showCarouselItem item: ", item)
+			this.currentItemData.displayType = item.displayType
+			this.currentItemData.pageType = item.pageType
 			AlertLevelSelect.setSelectedOption(item.alertLevel)
 			DurationInput.setValue(item.duration)
 			TriggerTimeInput.setValue(item.triggerTime)
 			Image.setImage(item.chartUrl)
 			HabitSelect.setSelectedOption(item.habitId)
-		}
+		},
+	},
+	currentItemData: {
+		index: 0,
+		displayType: "",
+		pageType: "",
 	},
 	async onload () {
 		console.log("carousel_item onload", appsmith.store.growing)
@@ -61,9 +60,9 @@ export default {
 		this.habit = getHabit.data
 
 		CategorySlider.setValue(0)
-		this.currentItem.setIndex(index)
+		this.currentItemData.index = 0
 		console.log(this.currentItem)
-		this.currentItem.showCarouselItem()
+		this.currentItemOperator.showCarouselItem()
 	},
 	async fillCarouselItemSlider() {
 		var result = []

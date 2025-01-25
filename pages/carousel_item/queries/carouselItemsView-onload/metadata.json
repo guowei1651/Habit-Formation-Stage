@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6776409599a03b6e785aa1c3_eead5ab7-5240-4752-b77c-b7d0ff7d2e65",
-  "id": "carousel_item_carouselItemsView.myFun2",
+  "gitSyncId": "6776409599a03b6e785aa1c3_84579b07-316c-4d95-8fe2-a4db23947171",
+  "id": "carousel_item_carouselItemsView.onload",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -10,7 +10,6 @@
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },
-    "clientSideExecution": true,
     "collectionId": "carousel_item_carouselItemsView",
     "confirmBeforeExecute": false,
     "datasource": {
@@ -24,8 +23,8 @@
       }
     ],
     "executeOnLoad": false,
-    "fullyQualifiedName": "carouselItemsView.myFun2",
-    "name": "myFun2",
+    "fullyQualifiedName": "carouselItemsView.onload",
+    "name": "onload",
     "pageId": "carousel_item",
     "userSetOnLoad": false
   }
