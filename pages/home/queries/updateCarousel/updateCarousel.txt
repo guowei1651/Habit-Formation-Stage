@@ -1,0 +1,3 @@
+UPDATE appsmith.carousel
+	SET "name"={{this.params.name}},description={{this.params.description}}
+	WHERE id={{this.params.id}};

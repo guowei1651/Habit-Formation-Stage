@@ -1,0 +1,3 @@
+SELECT count(1) 
+FROM carousel 
+WHERE owner_id = {{appsmith.store.growing.id}} AND name = {{this.params.name}} AND delete_flag = false;

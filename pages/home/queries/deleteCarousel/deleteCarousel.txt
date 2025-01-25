@@ -1,0 +1,1 @@
+UPDATE "carousel" SET delete_flag = true WHERE owner_id = {{appsmith.store.growing.id}} AND id = {{this.params.id}};

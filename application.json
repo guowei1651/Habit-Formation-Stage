@@ -48,7 +48,11 @@
       "isDefault": false
     },
     {
-      "id": "carousel",
+      "id": "carousel_item",
+      "isDefault": false
+    },
+    {
+      "id": "user_info",
       "isDefault": false
     }
   ],

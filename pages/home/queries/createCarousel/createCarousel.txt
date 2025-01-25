@@ -1,0 +1,2 @@
+INSERT INTO carousel ("name",description,owner_id,brownser_url)
+	VALUES ({{this.params.name}},{{this.params.description}},{{appsmith.store.growing.id}},'');

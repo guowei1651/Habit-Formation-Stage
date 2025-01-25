@@ -1,0 +1,28 @@
+{
+  "gitSyncId": "6776409599a03b6e785aa1c3_9452ecf8-305b-404b-a414-676b850c317a",
+  "id": "carousel_item_carouselsView",
+  "unpublishedCollection": {
+    "name": "carouselsView",
+    "pageId": "carousel_item",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "carouselItems",
+        "value": "[]"
+      },
+      {
+        "name": "carouselItemSlider",
+        "value": "[]"
+      },
+      {
+        "name": "habit",
+        "value": "[]"
+      },
+      {
+        "name": "currentItem",
+        "value": "{\n  index: 0,\n  gloabThis: {},\n  setIndex(i, outterObj) {\n    carouselsView.currentI.index = i;\n    carouselsView.gloabThis = outterObj;\n  },\n  getItem() {\n    let self = this;\n    console.log(\"CurrentItem getItem \", this);\n    if (!self.gloabThis.carouselItems || self.gloabThis.carouselItems.length == 0) {\n      return \"remind\";\n    }\n    let itemCount = self.gloabThis.carouselItems.length;\n    if (self.index < 0 || self.index >= itemCount) {\n      return \"remind\";\n    }\n    return self.gloabThis.carouselItems[carouselsView.index];\n  },\n  getDisplayTypeValue() {\n    return carouselsView.getItem().displayType;\n  },\n  getPageTypeValue() {\n    return carouselsView.getItem().pageType;\n  },\n  showCarouselItem() {\n    var item = carouselsView.carouselItems[carouselsView.index];\n    AlertLevelSelect.setSelectedOption(item.alertLevel);\n    DurationInput.setValue(item.duration);\n    TriggerTimeInput.setValue(item.triggerTime);\n    Image.setImage(item.chartUrl);\n    HabitSelect.setSelectedOption(item.habitId);\n  }\n}"
+      }
+    ]
+  }
+}

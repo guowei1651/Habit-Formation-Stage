@@ -4,7 +4,7 @@
   "borderColor": "#d4d4d8",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 45,
+  "bottomRow": 47,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
@@ -74,8 +74,8 @@
   "mobileRightColumn": 61,
   "mobileTopRow": 49,
   "needsErrorInfo": false,
-  "originalBottomRow": 45,
-  "originalTopRow": 22,
+  "originalBottomRow": 47,
+  "originalTopRow": 24,
   "parentColumnSpace": 16.6875,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -84,7 +84,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "shouldScrollContents": true,
-  "topRow": 22,
+  "topRow": 24,
   "type": "FORM_WIDGET",
   "widgetId": "0uwrsy4zbc",
   "widgetName": "loginForm"
