@@ -4,23 +4,33 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 13,
   "boxShadow": "none",
-  "defaultOptionValue": "GREEN",
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "sourceData"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
-  "dynamicTriggerPathList": [],
-  "isDisabled": false,
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": "{{carouselItemsView.carouselItems.length == 0}}",
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
@@ -31,7 +41,7 @@
   "labelText": "提醒级别",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 26,
+  "leftColumn": 25,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -40,17 +50,18 @@
   "mobileRightColumn": 44,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
+  "onOptionChange": "",
   "optionLabel": "name",
   "optionValue": "code",
   "parentColumnSpace": 14.546875,
   "parentId": "ksbi5mz1z4",
   "parentRowSpace": 10,
-  "placeholderText": "Select option",
+  "placeholderText": "",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 36,
+  "rightColumn": 35,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"name\": \"前景闪烁\",\n    \"code\": \"BLUE\"\n  },\n  {\n    \"name\": \"背景闪烁\",\n    \"code\": \"GREEN\"\n  },\n  {\n    \"name\": \"高频率\",\n    \"code\": \"RED\"\n  }\n]",
+  "sourceData": "[\n  {\n    \"name\": \"前景闪烁\",\n    \"code\": \"1\"\n  },\n  {\n    \"name\": \"背景闪烁\",\n    \"code\": \"2\"\n  },\n  {\n    \"name\": \"高频率\",\n    \"code\": \"3\"\n  }\n]",
   "topRow": 6,
   "type": "SELECT_WIDGET",
   "version": 1,

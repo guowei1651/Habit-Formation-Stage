@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6776409599a03b6e785aa1c3_31f8091e-51d3-4186-9296-492da4700a2a",
-  "id": "home_getCarousel",
+  "gitSyncId": "6776409599a03b6e785aa1c3_5346e137-03a8-4d02-9e3b-1c29e1efdee0",
+  "id": "carousel_item_insertCarouseItems",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT c.id,c.name,c.description, COUNT(ci.*) as item_num, c.created_at, c.updated_at\nFROM carousel as c LEFT JOIN carousel_item ci ON c.id = ci.carousel_id AND ci.delete_flag = FALSE\nWHERE owner_id = {{appsmith.store.growing.id}} AND c.delete_flag = FALSE\nGROUP BY c.id;",
+      "body": "INSERT INTO carousel_item (carousel_id,\"order\",\"type\",display_type,relations_id,alert_level,trigger_time,chart_url)\n\tVALUES ({{this.params.carouselId}},{{this.params.order}},{{this.params.type}},{{this.params.displayType}},{{this.params.relationsId}},\n\t\t\t\t\t{{this.params.alertLevel}},{{this.params.triggerTime}},{{this.params.chartUrl}});",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
-    "name": "getCarousel",
-    "pageId": "home",
+    "executeOnLoad": false,
+    "name": "insertCarouseItems",
+    "pageId": "carousel_item",
     "userSetOnLoad": false
   }
 }

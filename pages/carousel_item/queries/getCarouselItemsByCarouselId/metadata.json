@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * \nFROM carousel_item\nWHERE carousel_id = {{this.params.id}} AND delete_flag = FALSE;",
+      "body": "SELECT carousel_id, \"order\", \"type\", display_type, relations_id, alert_level, trigger_time, duration, chart_url, created_at, updated_at, delete_flag\nFROM carousel_item\nWHERE carousel_id = {{this.params.id}} AND delete_flag = FALSE\nORDER BY \"order\";",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "name": "getCarouselItemsByCarouselId",
     "pageId": "carousel_item",
     "userSetOnLoad": false

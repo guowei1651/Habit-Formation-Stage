@@ -4,19 +4,31 @@
   "animateLoading": true,
   "bottomRow": 12,
   "boxShadow": "none",
-  "defaultOptionValue": "{{\ncarouselItemsView.currentItem.displayType\n}}",
+  "defaultOptionValue": "{{\ncarouselItemsView.currentItemData.displayType\n}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "defaultOptionValue"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicTriggerPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onSelectionChange"
+    }
+  ],
   "flexVerticalAlignment": "start",
-  "isDisabled": false,
+  "isDisabled": "{{carouselItemsView.carouselItems.length == 0}}",
   "isInline": true,
   "isLoading": false,
   "isRequired": true,
@@ -35,6 +47,7 @@
   "mobileRightColumn": 29,
   "mobileTopRow": 2,
   "needsErrorInfo": false,
+  "onSelectionChange": "",
   "options": [
     {
       "label": "常驻页面",

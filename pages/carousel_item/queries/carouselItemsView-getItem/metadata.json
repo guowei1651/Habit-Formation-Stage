@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6776409599a03b6e785aa1c3_714dc6ee-2bef-4ddf-8353-a841b21a994b",
-  "id": "carousel_item_carouselItemsView.fillCarouselItemSlider",
+  "gitSyncId": "6776409599a03b6e785aa1c3_f1ab272b-79b3-4454-9b9c-a8fc68cb8bef",
+  "id": "carousel_item_carouselItemsView.getItem",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -23,8 +23,8 @@
       }
     ],
     "executeOnLoad": false,
-    "fullyQualifiedName": "carouselItemsView.fillCarouselItemSlider",
-    "name": "fillCarouselItemSlider",
+    "fullyQualifiedName": "carouselItemsView.getItem",
+    "name": "getItem",
     "pageId": "carousel_item",
     "userSetOnLoad": false
   }

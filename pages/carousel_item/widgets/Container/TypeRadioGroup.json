@@ -4,19 +4,31 @@
   "animateLoading": true,
   "bottomRow": 19,
   "boxShadow": "none",
-  "defaultOptionValue": "{{carouselsView}}",
+  "defaultOptionValue": "{{carouselItemsView.currentItemData.pageType}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "defaultOptionValue"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicTriggerPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onSelectionChange"
+    }
+  ],
   "flexVerticalAlignment": "start",
-  "isDisabled": false,
+  "isDisabled": "{{carouselItemsView.carouselItems.length == 0}}",
   "isInline": true,
   "isLoading": false,
   "isRequired": true,
@@ -35,6 +47,7 @@
   "mobileRightColumn": 29,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
+  "onSelectionChange": "",
   "options": [
     {
       "label": "美图",

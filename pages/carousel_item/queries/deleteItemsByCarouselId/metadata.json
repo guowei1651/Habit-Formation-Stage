@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6776409599a03b6e785aa1c3_31f8091e-51d3-4186-9296-492da4700a2a",
-  "id": "home_getCarousel",
+  "gitSyncId": "6776409599a03b6e785aa1c3_e9816be0-9055-4628-942e-c43b37335a7e",
+  "id": "carousel_item_deleteItemsByCarouselId",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT c.id,c.name,c.description, COUNT(ci.*) as item_num, c.created_at, c.updated_at\nFROM carousel as c LEFT JOIN carousel_item ci ON c.id = ci.carousel_id AND ci.delete_flag = FALSE\nWHERE owner_id = {{appsmith.store.growing.id}} AND c.delete_flag = FALSE\nGROUP BY c.id;",
+      "body": "UPDATE carousel_item SET delete_flag = TRUE WHERE carousel_id = {{this.params.id}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
-    "name": "getCarousel",
-    "pageId": "home",
+    "executeOnLoad": false,
+    "name": "deleteItemsByCarouselId",
+    "pageId": "carousel_item",
     "userSetOnLoad": false
   }
 }

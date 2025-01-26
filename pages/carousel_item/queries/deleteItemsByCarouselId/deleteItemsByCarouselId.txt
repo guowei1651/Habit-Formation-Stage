@@ -1,0 +1,1 @@
+UPDATE carousel_item SET delete_flag = TRUE WHERE carousel_id = {{this.params.id}};

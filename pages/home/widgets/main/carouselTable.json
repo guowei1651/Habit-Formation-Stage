@@ -216,7 +216,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "轮播项查看",
-          "onClick": "{{navigateTo('carousel_item', {\n\"type\": \"update\",\n\t\"id\": carouselTable.triggeredRow.id\n}, 'SAME_WINDOW');}}",
+          "onClick": "{{navigateTo('carousel_item', {\n\t\"id\": carouselTable.triggeredRow.id\n}, 'SAME_WINDOW');}}",
           "widgetId": "nuabttf051"
         },
         "menuItemvupk15sp10": {

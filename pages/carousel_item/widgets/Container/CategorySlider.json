@@ -1,7 +1,7 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
-  "bottomRow": 6,
+  "bottomRow": 5,
   "defaultOptionValue": "0",
   "dynamicBindingPathList": [
     {
@@ -16,7 +16,11 @@
       "key": "options"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onChange"
+    }
+  ],
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
@@ -32,6 +36,7 @@
   "mobileRightColumn": 54,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
+  "onChange": "{{carouselItemsView.fillCurrentItem();}}",
   "options": "{{carouselItemsView.carouselItemSlider}}",
   "parentColumnSpace": 14.546875,
   "parentId": "ksbi5mz1z4",
@@ -43,7 +48,7 @@
   "shouldTruncate": false,
   "showMarksLabel": true,
   "sliderSize": "m",
-  "topRow": 0,
+  "topRow": 1,
   "type": "CATEGORY_SLIDER_WIDGET",
   "version": 1,
   "widgetId": "hx7ht4z6os",

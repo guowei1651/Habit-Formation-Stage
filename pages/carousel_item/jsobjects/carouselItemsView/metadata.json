@@ -8,6 +8,14 @@
     "pluginType": "JS",
     "variables": [
       {
+        "name": "defaultItem",
+        "value": "{\n  displayType: \"remind\",\n  pageType: \"habit\",\n  alertLevel: '',\n  duration: 0,\n  triggerTime: '',\n  chartUrl: '',\n  habitId: 0\n}"
+      },
+      {
+        "name": "carouselId",
+        "value": "0"
+      },
+      {
         "name": "carouselItems",
         "value": "[]"
       },
@@ -21,11 +29,11 @@
       },
       {
         "name": "currentItemOperator",
-        "value": "{\n  getItem() {\n    let index = carouselItemsView.currentItemData.index;\n    console.log(\"CurrentItem getItem \", this);\n    if (!carouselItemsView.carouselItems || carouselItemsView.carouselItems.length == 0) {\n      return \"remind\";\n    }\n    let itemCount = carouselItemsView.currentItemData.length;\n    if (index < 0 || index >= itemCount) {\n      return \"remind\";\n    }\n    return carouselItemsView.currentItemData[carouselItemsView.index];\n  },\n  getDisplayTypeValue() {\n    return carouselItemsView.currentItem.getItem().displayType;\n  },\n  getPageTypeValue() {\n    return carouselItemsView.currentItem.getItem().pageType;\n  },\n  showCarouselItem() {\n    var item = carouselItemsView.currentItem.getItem();\n    carouselItemsView.currentItem.displayType = item.displayType;\n    carouselItemsView.currentItem.pageType = item.pageType;\n    AlertLevelSelect.setSelectedOption(item.alertLevel);\n    DurationInput.setValue(item.duration);\n    TriggerTimeInput.setValue(item.triggerTime);\n    Image.setImage(item.chartUrl);\n    HabitSelect.setSelectedOption(item.habitId);\n  }\n}"
+        "value": "{\n  getDisplayTypeValue() {\n    return carouselItemsView.getItem().displayType;\n  },\n  getPageTypeValue() {\n    return carouselItemsView.getItem().pageType;\n  },\n  fillCarouselItemSlider() {\n    var result = [];\n    for (var i = 1; i < carouselItemsView.carouselItems.length + 1; i++) {\n      result.push({\n        \"label\": i + \"\",\n        \"value\": i\n      });\n    }\n    carouselItemsView.carouselItemSlider = result;\n    return result;\n  },\n  showCarouselItem() {\n    var item = carouselItemsView.getItem();\n    if (!item) {\n      console.log(\"showCarouselItem item is null\");\n      carouselItemsView.currentItemData.displayType = \"remind\";\n      carouselItemsView.currentItemData.pageType = \"habit\";\n      AlertLevelSelect.setSelectedOption(\"\");\n      DurationInput.setValue(0);\n      TriggerTimeInput.setValue(\"\");\n      Image.setImage(\"https://assets.appsmith.com/widgets/default.png\");\n      HabitSelect.setSelectedOption(0);\n    } else {\n      console.log(\"showCarouselItem item: \", item);\n      carouselItemsView.currentItemData.displayType = item.displayType;\n      carouselItemsView.currentItemData.pageType = item.pageType;\n      AlertLevelSelect.setSelectedOption(item.alertLevel);\n      DurationInput.setValue(item.duration);\n      TriggerTimeInput.setValue(item.triggerTime);\n      Image.setImage(item.chartUrl);\n      HabitSelect.setSelectedOption(item.habitId);\n    }\n  },\n  recordCarouselItem() {\n    var item = carouselItemsView.getItem();\n    console.log(\"recordCarouselItem item:\", item);\n    item.displayType = DisplayRadioGroup.selectedOptionValue;\n    item.pageType = TypeRadioGroup.selectedOptionValue;\n    item.alertLevel = AlertLevelSelect.selectedOptionValue;\n    item.duration = DurationInput.text;\n    item.triggerTime = TriggerTimeInput.text;\n    item.chartUrl = Image.image;\n    item.habitId = HabitSelect.selectedOptionValue;\n  }\n}"
       },
       {
         "name": "currentItemData",
-        "value": "{\n  index: 0,\n  displayType: \"\",\n  pageType: \"\"\n}"
+        "value": "{\n  lastIndex: 0,\n  index: 0,\n  displayType: \"\",\n  pageType: \"\"\n}"
       }
     ]
   }

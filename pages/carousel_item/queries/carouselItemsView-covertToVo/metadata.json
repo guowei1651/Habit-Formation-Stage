@@ -1,12 +1,16 @@
 {
-  "gitSyncId": "6776409599a03b6e785aa1c3_75840659-eed3-4bcc-a9ce-87d68615d803",
-  "id": "carousel_item_carouselItemsView.onload",
+  "gitSyncId": "6776409599a03b6e785aa1c3_f0027e03-89c0-4f30-9f35-774c7eb3d2e4",
+  "id": "carousel_item_carouselItemsView.covertToVo",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
     "actionConfiguration": {
       "encodeParamsToggle": true,
-      "jsArguments": [],
+      "jsArguments": [
+        {
+          "name": "list"
+        }
+      ],
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },
@@ -22,10 +26,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
-    "fullyQualifiedName": "carouselItemsView.onload",
-    "name": "onload",
+    "executeOnLoad": false,
+    "fullyQualifiedName": "carouselItemsView.covertToVo",
+    "name": "covertToVo",
     "pageId": "carousel_item",
-    "userSetOnLoad": true
+    "userSetOnLoad": false
   }
 }
