@@ -149,11 +149,11 @@ export default {
 			this.carouselId = carouselId
 			await getCarouselItemsByCarouselId.run({"id": carouselId})
 			this.carouselItems = await this.covertToVo(getCarouselItemsByCarouselId.data)
-			Container.setVisibility(true)
+			ConfigerContainer.setVisibility(true)
 			Image.setVisibility(true)
 		} else {
 			showAlert("请从正确位置进入页面，否这本页面无法使用", "error")
-			Container.setVisibility(false)
+			ConfigerContainer.setVisibility(false)
 			Image.setVisibility(false)
 			return
 		}

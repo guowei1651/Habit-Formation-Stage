@@ -39,7 +39,7 @@
     "updated_at",
     "customColumn1"
   ],
-  "columnUpdatedAt": 1737777597755,
+  "columnUpdatedAt": 1737992144343,
   "columnWidthMap": {
     "created_at": 175,
     "updated_at": 188
@@ -98,6 +98,9 @@
     },
     {
       "key": "onSearchTextChanged"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItem9n71hxoupq.onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -112,6 +115,9 @@
     },
     {
       "key": "primaryColumns.customColumn1.menuItems.menuItem1lvx4wi3zh.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItem9n71hxoupq.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -215,9 +221,18 @@
           "index": 1,
           "isDisabled": false,
           "isVisible": true,
-          "label": "轮播项查看",
+          "label": "轮播项",
           "onClick": "{{navigateTo('carousel_item', {\n\t\"id\": carouselTable.triggeredRow.id\n}, 'SAME_WINDOW');}}",
           "widgetId": "nuabttf051"
+        },
+        "menuItem9n71hxoupq": {
+          "id": "menuItem9n71hxoupq",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "预览",
+          "onClick": "{{homeView.previewButtonAction()}}",
+          "widgetId": "n3a15026ay"
         },
         "menuItemvupk15sp10": {
           "id": "menuItemvupk15sp10",

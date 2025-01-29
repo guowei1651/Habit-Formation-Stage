@@ -1,0 +1,1 @@
+UPDATE habits SET delete_flag = TRUE WHERE owner_id = {{appsmith.store.growing.id}} AND id = {{this.params.id}};

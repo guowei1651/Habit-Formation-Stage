@@ -1,0 +1,57 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "left",
+  "animateLoading": true,
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "defaultOptionValue": "times",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "isDisabled": false,
+  "isInline": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "an64lon9ac",
+  "label": "",
+  "labelAlignment": "left",
+  "labelPosition": "Left",
+  "labelTextSize": "0.875rem",
+  "labelWidth": "0",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 20,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "options": [
+    {
+      "label": "次数",
+      "value": "times"
+    },
+    {
+      "label": "频率",
+      "value": "frequency"
+    }
+  ],
+  "originalBottomRow": 4,
+  "originalTopRow": 0,
+  "parentColumnSpace": 6.14288330078125,
+  "parentId": "brec38nlcj",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 28,
+  "topRow": 0,
+  "type": "RADIO_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "en5vhh68a6",
+  "widgetName": "SwitchRadioGroup"
+}

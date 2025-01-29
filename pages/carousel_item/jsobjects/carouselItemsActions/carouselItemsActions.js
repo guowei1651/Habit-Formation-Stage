@@ -1,4 +1,37 @@
 export default {
+	reverseString(str) {
+		let reversedStr = '';
+		for (let i = str.length - 1; i >= 0; i--) {
+			reversedStr += str[i];
+		}
+		return reversedStr;
+	},
+	encrypt(content) {
+		const encodeUint8Array = Uint8Array.from(Array.from(content).map(letter => letter.charCodeAt(0)));
+		let encodeBase64 = encodeUint8Array.toBase64()
+		let enencodeBase64 = this.reverseString(encodeBase64)
+		return enencodeBase64;
+	},
+	decrypt(content) {
+		let dedecodeBase64 = this.reverseString(content)
+		const decodeUint8Array = Uint8Array.fromBase64(dedecodeBase64);
+		var encodeStr = String.fromCharCode.apply(null, decodeUint8Array);
+		return encodeStr;
+	},
+	previewButtonAction() {
+		// 获取当前时间
+		const currentTime = new Date();
+		// 计算过期时间（加 1 小时）
+		const expirationTime = new Date(currentTime.getTime() + 60 * 60 * 1000);
+		var obj = { 'uId': appsmith.store.growing.id, 'cId': carouselItemsView.carouselId, 'expTime': expirationTime}
+		let jsonStr = JSON.stringify(obj)
+		console.log("json string:", jsonStr)
+		let encode = this.encrypt(jsonStr)
+		console.log("encode: ", encode)
+
+		let url = "http://172.25.1.22/app/growing-external/home-6780ed538796eb006aaa90b3?branch=master&embed=true&param=" + encode
+		navigateTo(url, {}, 'NEW_WINDOW')
+	},
 	uploadImage: async () => {
 		var res = await ossSaveImage.run()
 		if (res && !res.url) {

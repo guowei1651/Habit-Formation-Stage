@@ -1,0 +1,5 @@
+UPDATE habits
+	SET prompt={{this.params.prompt}}, ext_info={{this.params.ext_info}}, ext_desc={{this.params.ext_desc}}, display_chart={{this.params.display_chart}},
+	    duration={{this.params.duration}},take_habit_from_repetitions={{this.params.take_habit_from_repetitions}},target_frequency={{this.params.target_frequency}},
+	    frequency_time_unit={{this.params.frequency_time_unit}}, updated_at = now()
+	WHERE id={{this.params.id}};

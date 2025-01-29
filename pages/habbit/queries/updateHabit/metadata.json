@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6776409599a03b6e785aa1c3_805d8080-a949-4e0f-835d-ee5df4f30f13",
-  "id": "habbit_findMyHabits",
+  "gitSyncId": "6776409599a03b6e785aa1c3_7b5e64d5-e54e-4148-93dd-7fcc4f8995d2",
+  "id": "habbit_updateHabit",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT h.*, COALESCE(hrc.times, 0) as total_times\nFROM habits AS h LEFT JOIN (\n\tSELECT relations_id, COUNT(1) as times \n\tFROM habit_raw_records \n\tWHERE type = 3\n\tGROUP by relations_id) AS hrc \n\tON h.id = hrc.relations_id\nWHERE h.owner_id = {{appsmith.store.growing.id}} AND h.delete_flag = FALSE;",
+      "body": "UPDATE habits\n\tSET prompt={{this.params.prompt}}, ext_info={{this.params.ext_info}}, ext_desc={{this.params.ext_desc}}, display_chart={{this.params.display_chart}},\n\t    duration={{this.params.duration}},take_habit_from_repetitions={{this.params.take_habit_from_repetitions}},target_frequency={{this.params.target_frequency}},\n\t    frequency_time_unit={{this.params.frequency_time_unit}}, updated_at = now()\n\tWHERE id={{this.params.id}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,8 +27,8 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
-    "name": "findMyHabits",
+    "executeOnLoad": false,
+    "name": "updateHabit",
     "pageId": "habbit",
     "userSetOnLoad": false
   }
