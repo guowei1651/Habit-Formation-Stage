@@ -42,10 +42,14 @@ export default {
 		console.log("filepicker : ", FilePicker)
 		let result = ""
 		try {
-			result = await this.uploadImage()
-			if (!result) {
-				console.error("上传图片发生错误")
-				return
+			if (FilePicker.files.length == 0) {
+				result = Image.image
+			} else {
+				result = await this.uploadImage()
+				if (!result) {
+					console.error("上传图片发生错误")
+					return
+				}
 			}
 		} catch (error) {
 			console.error("上传图片发生错误", error.message)
@@ -59,10 +63,15 @@ export default {
 		param.ext_desc = DescInput.text
 		param.display_chart = result
 
-		param.target_frequency = Number(TargetFrequencyInput.text)
-		param.frequency_time_unit = FrequencyTimeUnitSelect.selectedOptionValue
-		param.take_habit_from_repetitions = Number(TakeRepetitionsInput.text)
-
+		if (SwitchRadioGroup.selectedOptionValue == 'tims') {
+			param.target_frequency = Number(TargetFrequencyInput.text)
+			param.frequency_time_unit = FrequencyTimeUnitSelect.selectedOptionValue
+			param.take_habit_from_repetitions = 0
+		} else {
+			param.target_frequency = 0
+			param.frequency_time_unit = ''
+			param.take_habit_from_repetitions = Number(TakeRepetitionsInput.text)
+		}
 		console.log("开始创建或者更新数据: ", param)
 		try {
 			console.log("id :", IdInput.text)

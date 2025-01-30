@@ -1,4 +1,7 @@
 export default {
+	displayModalData: {
+		switchRadioGroup: 'times'
+	},
 	onload () {
 		if (! appsmith.store.growing || ! appsmith.store.growing.id) {
 			navigateTo('login')
@@ -6,6 +9,9 @@ export default {
 	},
 	async disaplyImage() {
 		Image.setImage(FilePicker.files[0].data)
+	},
+	showModalSwitchRadioGroupDefault() {
+		return habitView.displayModalData.switchRadioGroup
 	},
 	covertFrequencyTimeUnitToDisplay(row) {
 		let timeUnit = row["frequency_time_unit"];
@@ -65,7 +71,24 @@ export default {
 			return '\u{1F315}'
 		}
 		return '\u{1F311}'
-	}, 
+	},
+	showCrateModal() {
+		console.log('showCrateModal : ')
+		TitleText.setText("创建习惯")
+		IdInput.setValue(0)
+		PromptInput.setValue("")
+		DurationInput.setValue("")
+		ExtInfoInput.setValue("")
+		DescInput.setValue("")
+		Image.setImage("")
+
+		TargetFrequencyInput.setValue("")
+		FrequencyTimeUnitSelect.setSelectedOption("")
+		TakeRepetitionsInput.setValue("")
+		SwitchRadioGroup.setData('times')
+
+		showModal(HabitModal.name)
+	},
 	showUpdateModal(row) {
 		console.log('showUpdateModal : ', row)
 		TitleText.setText("修改"+row.id+"号习惯")
@@ -77,12 +100,17 @@ export default {
 		Image.setImage(row.display_chart)
 
 		if (row.target_frequency && row.frequency_time_unit) {
+			this.displayModalData.switchRadioGroup = 'frequency'
+			console.log("展示目标频率与目标单位: ", row.target_frequency, row.frequency_time_unit)
+			TakeRepetitionsInput.setValue(0)
 			TargetFrequencyInput.setValue(row.target_frequency)
 			FrequencyTimeUnitSelect.setSelectedOption(row.frequency_time_unit)
-			SwitchRadioGroup.setData('frequency')
 		} else {
+			this.displayModalData.switchRadioGroup = 'times'
+			console.log("展示目标次数: ", row.take_habit_from_repetitions)
 			TakeRepetitionsInput.setValue(row.take_habit_from_repetitions)
-			SwitchRadioGroup.setData('times')
+			TargetFrequencyInput.setValue('')
+			FrequencyTimeUnitSelect.setSelectedOption('')
 		}
 
 		showModal(HabitModal.name)

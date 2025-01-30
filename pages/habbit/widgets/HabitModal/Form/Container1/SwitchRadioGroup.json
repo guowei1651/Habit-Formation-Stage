@@ -4,10 +4,13 @@
   "animateLoading": true,
   "bottomRow": 4,
   "boxShadow": "none",
-  "defaultOptionValue": "times",
+  "defaultOptionValue": "{{habitView.showModalSwitchRadioGroupDefault()}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
+    },
+    {
+      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",

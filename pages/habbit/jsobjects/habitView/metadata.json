@@ -6,6 +6,11 @@
     "pageId": "habbit",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "variables": []
+    "variables": [
+      {
+        "name": "displayModalData",
+        "value": "{\n  switchRadioGroup: 'times'\n}"
+      }
+    ]
   }
 }

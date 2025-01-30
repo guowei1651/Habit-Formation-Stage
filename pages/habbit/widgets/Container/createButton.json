@@ -36,7 +36,7 @@
   "mobileRightColumn": 52,
   "mobileTopRow": 8,
   "needsErrorInfo": false,
-  "onClick": "{{showModal(HabitModal.name)}}",
+  "onClick": "{{habitView.showCrateModal()}}",
   "parentColumnSpace": 19.8125,
   "parentId": "9m5b8b5tj9",
   "parentRowSpace": 10,

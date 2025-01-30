@@ -47,6 +47,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 62,
   "text": "Submit",
+  "tooltip": "",
   "topRow": 53,
   "type": "BUTTON_WIDGET",
   "version": 1,

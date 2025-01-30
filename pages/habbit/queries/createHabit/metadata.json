@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO habits (prompt,ext_info,ext_desc,display_chart,duration,take_habit_from_repetitions,target_frequency,frequency_time_unit,owner_id)\n\tVALUES ({{this.params.prompt}}, {{this.params.ext_info}}, {{this.params.ext_desc}}, {{this.params.display_chart}},\n\t\t\t\t\t{{this.params.duration}},{{this.params.take_habit_from_repetitions}}, {{this.params.target_frequency}},{{this.params.frequency_time_unit}},\n\t\t\t\t\t{{this.params.display_chart}},{{appsmith.store.growing.id}});\n",
+      "body": "INSERT INTO habits (prompt,ext_info,ext_desc,display_chart,duration,take_habit_from_repetitions,target_frequency,frequency_time_unit,owner_id)\n\tVALUES ({{this.params.prompt}}, {{this.params.ext_info}}, {{this.params.ext_desc}}, {{this.params.display_chart}},\n\t\t\t\t\t{{this.params.duration}}, {{this.params.take_habit_from_repetitions}}, {{this.params.target_frequency}},\n\t\t\t\t\t{{this.params.frequency_time_unit}}, {{appsmith.store.growing.id}});\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
